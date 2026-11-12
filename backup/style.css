@@ -1,0 +1,265 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+body{
+
+    background:#000;
+
+    color:#d8d8d8;
+
+    font-family:Consolas, monospace;
+
+    overflow:hidden;
+
+}
+
+
+
+#terminal{
+
+    width:100%;
+
+    height:100vh;
+
+    padding:40px;
+
+    overflow:hidden;
+
+}
+
+
+
+#terminal-output{
+
+    line-height:1.8;
+
+    white-space:pre-wrap;
+
+}
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+#input-container{
+
+    margin-top:30px;
+
+}
+
+
+
+#passcode{
+
+    margin-top:12px;
+
+    padding:10px;
+
+    width:120px;
+
+    background:#000;
+
+    border:1px solid #666;
+
+    color:white;
+
+}
+
+
+
+button{
+
+    padding:10px 16px;
+
+    margin-left:10px;
+
+    cursor:pointer;
+
+}
+
+
+
+#invitation-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#a23939;
+
+    color:white;
+
+
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+
+    text-align:center;
+
+
+
+    animation:fadeIn 2s ease;
+
+}
+
+
+
+.center h1{
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.center span{
+
+    display:block;
+
+    margin-top:20px;
+
+}
+
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+#opening{
+
+
+
+    min-height:100vh;
+
+
+
+    background:#a23939;
+
+
+
+    color:white;
+
+
+
+    padding:120px 20px;
+
+}
+
+
+
+.opening-inner{
+
+
+
+    max-width:800px;
+
+
+
+    margin:auto;
+
+
+
+    text-align:center;
+
+}
+
+
+
+#logo{
+
+
+
+    font-size:3rem;
+
+
+
+    margin-bottom:60px;
+
+}
+
+
+
+#opening-photo{
+
+
+
+    width:100%;
+
+
+
+    max-width:600px;
+
+
+
+    border-radius:16px;
+
+
+
+    filter:blur(4px);
+
+
+
+    transition:1.5s;
+
+}
+
+
+
+#opening-photo:hover{
+
+
+
+    filter:blur(0px);
+
+}
+
+
+
+#opening-text{
+
+
+
+    margin-top:60px;
+
+
+
+    line-height:2;
+
+}

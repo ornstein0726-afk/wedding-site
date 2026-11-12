@@ -1,44 +1,124 @@
-function checkPasscode() {
+const lines = [
 
 
 
-    const passcode =
-
-        document.getElementById("passcode").value;
+"> launch invitation",
 
 
 
-    const uploadArea =
+"",
 
-        document.getElementById("upload-area");
-
-
-
-    if (passcode === "0130") {
+"Initializing system...",
 
 
 
-        uploadArea.innerHTML = `
+"",
 
-            <p style="margin-top:20px;">
-
-                THANK YOU FOR SHARING.
-
-            </p>
+"Loading memory archive..........DONE",
 
 
 
-            <input type="file" accept="image/*">
-
-        `;
+"Loading venue information.......DONE",
 
 
 
-    } else {
+"Loading ceremony schedule.......DONE",
 
 
 
-        alert("PASSCODE ERROR");
+"Loading reception schedule......DONE",
+
+
+
+"Loading guest registry..........DONE",
+
+
+
+"",
+
+
+
+"Bride : NATSUMI",
+
+
+
+"Groom : SOYA",
+
+
+
+"",
+
+
+
+"Venue : HOTEL NEW GRAND",
+
+
+
+"Date : JAN 30 2027",
+
+
+
+"",
+
+
+
+"--------------------------------",
+
+
+
+"",
+
+
+
+"Authentication required"
+
+
+
+];
+
+
+
+const output =
+
+document.getElementById("terminal-output");
+
+
+
+let i = 0;
+
+
+
+function typeLine(){
+
+
+
+    if(i < lines.length){
+
+
+
+        output.innerHTML += lines[i] + "\n";
+
+
+
+        i++;
+
+
+
+        setTimeout(typeLine, 450);
+
+
+
+    }else{
+
+
+
+        document
+
+        .getElementById("input-container")
+
+        .classList
+
+        .remove("hidden");
 
 
 
@@ -46,3 +126,76 @@ function checkPasscode() {
 
 }
 
+
+
+typeLine();
+
+
+
+document
+
+.getElementById("unlockBtn")
+
+.addEventListener("click",()=>{
+
+
+
+    const value =
+
+    document.getElementById("passcode").value;
+
+
+
+   if(value==="0130"){
+
+
+
+    document
+
+    .getElementById("terminal")
+
+    .style.display = "none";
+
+
+
+    document
+
+    .getElementById("invitation-screen")
+
+    .style.display = "flex";
+
+
+
+    setTimeout(()=>{
+
+
+
+        alert(
+
+          "ここからオープニングアニメーションが開始されます"
+
+        );
+
+
+
+    },2500);
+
+
+
+}
+
+
+
+    }else{
+
+
+
+        alert("Authentication failed.");
+
+
+
+    }
+
+
+
+});
